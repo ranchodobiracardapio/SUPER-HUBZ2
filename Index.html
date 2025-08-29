@@ -29,6 +29,18 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
    }
+   /* Scrollbar for modal content */
+   .modal-content::-webkit-scrollbar {
+    width: 8px;
+   }
+   .modal-content::-webkit-scrollbar-thumb {
+    background-color: rgba(100, 100, 100, 0.5);
+    border-radius: 4px;
+   }
+   .modal-content {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(100, 100, 100, 0.5) transparent;
+   }
   </style>
  </head>
  <body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
@@ -144,6 +156,31 @@
     </div>
    </section>
   </main>
+
+  <!-- Modal Artigo -->
+  <div
+   id="article-modal"
+   class="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center p-4 z-50 hidden"
+   role="dialog"
+   aria-modal="true"
+   aria-labelledby="article-title"
+  >
+   <div
+    class="bg-gray-800 rounded-lg shadow-lg max-w-3xl w-full max-h-[90vh] overflow-y-auto modal-content relative"
+   >
+    <button
+     id="close-article"
+     aria-label="Fechar artigo"
+     class="absolute top-3 right-3 text-gray-400 hover:text-indigo-400 text-2xl focus:outline-none"
+    >
+     &times;
+    </button>
+    <div id="article-content" class="p-5 text-gray-100">
+     <!-- Conteúdo do artigo carregado via JS -->
+    </div>
+   </div>
+  </div>
+
   <footer class="bg-gray-800 text-gray-400 py-3 mt-10">
    <div
     class="container mx-auto max-w-7xl px-3 flex flex-col md:flex-row justify-between items-center text-xs md:text-sm"
@@ -195,7 +232,11 @@
     newsData.forEach((item) => {
      const article = document.createElement("article");
      article.className =
-      "bg-gray-800 rounded-lg shadow-lg overflow-hidden flex-shrink-0 w-64 flex flex-col";
+      "bg-gray-800 rounded-lg shadow-lg overflow-hidden flex-shrink-0 w-64 flex flex-col cursor-pointer";
+     article.setAttribute("tabindex", "0");
+     article.setAttribute("role", "button");
+     article.setAttribute("aria-pressed", "false");
+     article.dataset.id = item.id;
      article.innerHTML = `
       <img src="${item.image}" alt="${item.alt}" class="w-full h-36 object-cover" height="288" width="600" />
       <div class="p-3 flex flex-col flex-grow">
@@ -210,6 +251,14 @@
      })}</time>
       </div>
      `;
+     // Evento click para abrir artigo
+     article.addEventListener("click", () => openArticle(item.id));
+     article.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+       e.preventDefault();
+       openArticle(item.id);
+      }
+     });
      container.appendChild(article);
     });
    }
@@ -220,7 +269,11 @@
     missionsData.forEach((item) => {
      const div = document.createElement("div");
      div.className =
-      "bg-gray-800 rounded-lg shadow-lg p-3 md:p-4 flex flex-col md:flex-row md:items-center md:space-x-3";
+      "bg-gray-800 rounded-lg shadow-lg p-3 md:p-4 flex flex-col md:flex-row md:items-center md:space-x-3 cursor-pointer";
+     div.dataset.id = item.id;
+     div.setAttribute("tabindex", "0");
+     div.setAttribute("role", "button");
+     div.setAttribute("aria-pressed", "false");
      div.innerHTML = `
       <img src="${item.image}" alt="${item.alt}" class="w-20 h-20 md:w-28 md:h-28 object-contain mx-auto md:mx-0 rounded" height="120" width="120" />
       <div class="mt-2 md:mt-0 text-center md:text-left">
@@ -229,6 +282,13 @@
        <p class="text-indigo-400 font-semibold">Data de Lançamento: ${item.launchDate}</p>
       </div>
      `;
+     div.addEventListener("click", () => openArticle(item.id));
+     div.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+       e.preventDefault();
+       openArticle(item.id);
+      }
+     });
      container.appendChild(div);
     });
    }
@@ -240,8 +300,19 @@
      const img = document.createElement("img");
      img.src = item.src;
      img.alt = item.alt;
-     img.className = "rounded-lg object-cover w-full h-20 sm:h-24 md:h-28";
+     img.className = "rounded-lg object-cover w-full h-20 sm:h-24 md:h-28 cursor-pointer";
      img.height = 160;
+     img.dataset.id = item.id;
+     img.setAttribute("tabindex", "0");
+     img.setAttribute("role", "button");
+     img.setAttribute("aria-pressed", "false");
+     img.addEventListener("click", () => openArticle(item.id));
+     img.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+       e.preventDefault();
+       openArticle(item.id);
+      }
+     });
      container.appendChild(img);
     });
    }
@@ -252,7 +323,11 @@
     eventsData.forEach((item) => {
      const div = document.createElement("div");
      div.className =
-      "bg-gray-800 rounded-lg shadow-lg p-3 md:p-4 flex flex-col md:flex-row md:items-center md:justify-between";
+      "bg-gray-800 rounded-lg shadow-lg p-3 md:p-4 flex flex-col md:flex-row md:items-center md:justify-between cursor-pointer";
+     div.dataset.id = item.id;
+     div.setAttribute("tabindex", "0");
+     div.setAttribute("role", "button");
+     div.setAttribute("aria-pressed", "false");
      div.innerHTML = `
       <div>
        <h3 class="text-lg font-semibold mb-1 leading-tight">${item.title}</h3>
@@ -260,6 +335,13 @@
       </div>
       <time class="mt-2 md:mt-0 text-indigo-400 font-semibold">${item.date}</time>
      `;
+     div.addEventListener("click", () => openArticle(item.id));
+     div.addEventListener("keydown", (e) => {
+      if (e.key === "Enter" || e.key === " ") {
+       e.preventDefault();
+       openArticle(item.id);
+      }
+     });
      container.appendChild(div);
     });
    }
@@ -270,23 +352,92 @@
     missions: "missions.json",
     gallery: "gallery.json",
     events: "events.json",
+    articles: "articles.json",
    };
+
+   // Dados carregados
+   let articlesData = [];
 
    // Carregar e renderizar todos os dados
    async function loadAllData() {
-    const [newsData, missionsData, galleryData, eventsData] = await Promise.all([
-     fetchJSON(urls.news),
-     fetchJSON(urls.missions),
-     fetchJSON(urls.gallery),
-     fetchJSON(urls.events),
-    ]);
+    const [newsData, missionsData, galleryData, eventsData, articles] =
+     await Promise.all([
+      fetchJSON(urls.news),
+      fetchJSON(urls.missions),
+      fetchJSON(urls.gallery),
+      fetchJSON(urls.events),
+      fetchJSON(urls.articles),
+     ]);
 
     if (newsData) renderNews(newsData);
     if (missionsData) renderMissions(missionsData);
     if (galleryData) renderGallery(galleryData);
     if (eventsData) renderEvents(eventsData);
+    if (articles) articlesData = articles;
    }
 
+   // Abrir modal artigo
+   const modal = document.getElementById("article-modal");
+   const articleContent = document.getElementById("article-content");
+   const closeBtn = document.getElementById("close-article");
+
+   function openArticle(id) {
+    const article = articlesData.find((a) => a.id === id);
+    if (!article) return;
+
+    // Limpar conteúdo
+    articleContent.innerHTML = "";
+
+    // Título
+    const title = document.createElement("h2");
+    title.id = "article-title";
+    title.className = "text-2xl font-bold mb-4";
+    title.textContent = article.title;
+    articleContent.appendChild(title);
+
+    // Conteúdo multimídia
+    if (article.type === "image" && article.src) {
+     const img = document.createElement("img");
+     img.src = article.src;
+     img.alt = article.alt || article.title;
+     img.className = "rounded-lg mb-4 max-w-full h-auto mx-auto";
+     articleContent.appendChild(img);
+    } else if (article.type === "video" && article.src) {
+     const video = document.createElement("video");
+     video.src = article.src;
+     video.controls = true;
+     video.className = "rounded-lg mb-4 max-w-full mx-auto";
+     articleContent.appendChild(video);
+    }
+
+    // Texto
+    if (article.text) {
+     const p = document.createElement("p");
+     p.className = "text-gray-300 leading-relaxed whitespace-pre-line";
+     p.textContent = article.text;
+     articleContent.appendChild(p);
+    }
+
+    // Mostrar modal
+    modal.classList.remove("hidden");
+    // Focar no botão fechar para acessibilidade
+    closeBtn.focus();
+   }
+
+   // Fechar modal
+   closeBtn.addEventListener("click", () => {
+    modal.classList.add("hidden");
+    // Retornar foco para o último elemento clicado (opcional)
+   });
+
+   // Fechar modal com ESC
+   window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !modal.classList.contains("hidden")) {
+     modal.classList.add("hidden");
+    }
+   });
+
+   // URLs dos arquivos JSON (substitua pelos caminhos corretos)
    loadAllData();
   </script>
  </body>
