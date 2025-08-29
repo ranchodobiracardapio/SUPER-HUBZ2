@@ -2,66 +2,9 @@
   {
     "id": 1,
     "title": "Lançamento Histórico do Ônibus Espacial",
-    "type": "image",
-    "src": "https://storage.googleapis.com/a1aa/image/69269a59-848f-4804-1ff9-8e0f13c8e25f.jpg",
-    "alt": "Lançamento de ônibus espacial à noite com chamas brilhantes e fumaça",
-    "text": "Artigo: O Legado e o Impacto do Ônibus Espacial na Exploração Espacial
-
-Um Marco Revolucionário
-
-O programa do Ônibus Espacial (Space Shuttle) da NASA simbolizou uma virada radical em termos de tecnologia aeroespacial. Lançado pela primeira vez em 1981 com a missão STS-1 do Columbia, o ônibus espacial introduziu um conceito inovador: o primeiro veículo parcialmente reutilizável capaz de decolar como um foguete e pousar como um avião. 
-
-Tecnologias Pioneiras e Flexibilidade Operacional
-
-O design incluía orbitador reutilizável, propulsores sólidos recuperáveis e um tanque externo descartável, permitindo voos repetidos e elevando a ambição das missões. 
-
-Com uma baia de carga versátil, o ônibus podia lançar e recuperar satélites, realizar reparos em órbita, transportar instrumentos científicos e conduzir experimentos diversos. 
-
-O famoso Canadarm (braço robótico) destacou-se em operações como a manutenção do Telescópio Espacial Hubble e a montagem da Estação Espacial Internacional (ISS). 
-
-
-Grandes Conquistas e Momentos Simbólicos
-
-Primeira missão tripulada (STS-1): foi conduzida pelos astronautas John Young e Robert Crippen, representando o retorno dos EUA a voos tripulados após o programa Apollo-Soyuz. 
-
-Diversidade histórica: em 1983, Sally Ride tornou-se a primeira mulher norte-americana no espaço, e Guion “Guy” Bluford Jr. foi o primeiro afro-americano a voar em um ônibus espacial. 
-
-Missões icônicas:
-
-Lançamento do Telescópio Hubble (1990) e subsequentes missões de manutenção pelo shuttle Discovery e Endeavour. 
-
-Início da cooperação com a Rússia ao acoplar-se à estação Mir (1995), marcando o 100º voo espacial tripulado dos EUA. 
-
-Participação fundamental na montagem da ISS, com cerca de um terço das missões do ônibus espacial contribuindo diretamente para sua construção. 
-
-
-
-Desafios e Fases Críticas
-
-Planejamento ambicioso: a equipe da NASA tentou inicialmente um sistema totalmente reutilizável, mas limitações orçamentárias fizeram a agência optar por uma solução mista (boosters reutilizáveis e tanque descartável). 
-
-Acidentes trágicos:
-
-Challenger (1986): explodiu logo após o lançamento, resultando na morte de sete tripulantes.
-
-Columbia (2003): desintegrou-se na reentrada devido a um dano causado por espuma do tanque externo. 
-
-
-Essas tragédias destacaram os riscos inerentes ao programa e aceleraram a aposentadoria dos ônibus. 
-
-
-O Legado Duradouro
-
-Entre 1981 e 2011, foram realizados 135 voos, com mais de 800 astronautas, acumulando cerca de 1.322 dias em missões espaciais. 
-
-O conceito de reusabilidade do ônibus espacial inspirou projetos futuros, como o Space Launch System (Artemis), que utiliza os motores desenvolvidos originalmente para os orbitadores. 
-
-O shuttle representou três décadas de inovação, colaboração internacional e sonho de expansão espacial, mesmo sem ter alcançado todos os seus objetivos iniciais (como voos frequentes e baratos). 
-
-
-Conclusão
-
-O programa do ônibus espacial deixou um legado profundo. Representou o ápice da engenharia aeronáutica e a vontade de tornar o espaço mais acessível — ao mesmo tempo em que expôs os limites dessa ambição. Com suas inovações técnicas, missões científicas e simbólicas, e tragédias marcantes, o shuttle moldou os rumos da exploração espacial e continua a inspirar novas gerações a olhar para o cosmos."
+    "type": "pdf",
+    "src": "onibusespacial.pdf",
+    "text": "Este documento detalha o histórico lançamento do ônibus espacial, incluindo dados técnicos, cronogramas e imagens exclusivas."
   },
   {
     "id": 2,
@@ -69,7 +12,7 @@ O programa do ônibus espacial deixou um legado profundo. Representou o ápice d
     "type": "image",
     "src": "https://storage.googleapis.com/a1aa/image/c19397f8-97b7-45df-6913-d5df353de3e0.jpg",
     "alt": "Rover em Marte explorando superfície rochosa vermelha com nuvens de poeira",
-    "text": "O rover da NASA em Marte descobriu formações rochosas incomuns que podem indicar a presença passada de água no planeta vermelho, abrindo novas possibilidades para a busca por vida extraterrestre."
+    "text": "O rover da NASA em Marte descobriu formações rochosas incomuns que podem fornecer pistas sobre a atividade passada de água no planeta."
   },
   {
     "id": 3,
@@ -77,7 +20,7 @@ O programa do ônibus espacial deixou um legado profundo. Representou o ápice d
     "type": "image",
     "src": "https://storage.googleapis.com/a1aa/image/9aae4aa1-757c-4853-bb8d-150aa01337c8.jpg",
     "alt": "Telescópio espacial capturando uma galáxia espiral com estrelas brilhantes e poeira cósmica",
-    "text": "O telescópio espacial profundo enviou imagens impressionantes de uma galáxia espiral distante, revelando detalhes inéditos sobre a formação e evolução das estrelas."
+    "text": "O telescópio espacial profundo enviou imagens impressionantes de uma galáxia espiral distante, revelando novos insights sobre a formação de estrelas."
   },
   {
     "id": 4,
@@ -100,45 +43,5 @@ O programa do ônibus espacial deixou um legado profundo. Representou o ápice d
     "type": "video",
     "src": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
     "text": "Astronautas realizaram uma caminhada espacial para reparar equipamentos essenciais na estação espacial, garantindo a continuidade das operações e a segurança da tripulação."
-  },
-  {
-    "id": 7,
-    "title": "Artemis III - Pouso na Lua",
-    "type": "image",
-    "src": "https://storage.googleapis.com/a1aa/image/06e332e7-ccab-406e-5209-575330984c9e.jpg",
-    "alt": "Logo da Missão Artemis para a Lua mostrando uma lua estilizada e foguete",
-    "text": "A missão Artemis III da NASA visa pousar astronautas no polo sul lunar, marcando um novo capítulo na exploração humana da Lua."
-  },
-  {
-    "id": 8,
-    "title": "Europa Clipper - Exploração da Lua de Júpiter",
-    "type": "image",
-    "src": "https://storage.googleapis.com/a1aa/image/a698c8da-047a-48a8-d78d-d81adf4f876d.jpg",
-    "alt": "Logo da Missão Europa Clipper apresentando a lua Europa de Júpiter e a espaçonave",
-    "text": "A missão Europa Clipper investigará a habitabilidade da lua Europa, estudando sua camada de gelo e oceano subterrâneo em busca de sinais de vida."
-  },
-  {
-    "id": 9,
-    "title": "Telescópio Espacial James Webb - Missão Estendida",
-    "type": "image",
-    "src": "https://storage.googleapis.com/a1aa/image/0e444a1f-f0c8-4927-b973-72cd14f80237.jpg",
-    "alt": "Logo do Telescópio Espacial James Webb com um espelho hexagonal dourado",
-    "text": "O Telescópio Espacial James Webb continua a explorar o universo, fornecendo imagens e dados sem precedentes sobre galáxias distantes."
-  },
-  {
-    "id": 10,
-    "title": "SpaceX Starship - Missão Lunar",
-    "type": "image",
-    "src": "https://storage.googleapis.com/a1aa/image/e729e224-a64d-4d99-47cb-f00f3dfcc846.jpg",
-    "alt": "Logo da Missão SpaceX Starship com foguete estilizado e estrelas",
-    "text": "A SpaceX planeja lançar a Starship para missões lunares tripuladas e de carga, abrindo caminho para a colonização espacial."
-  },
-  {
-    "id": 11,
-    "title": "Tianwen-1 - Missão a Marte",
-    "type": "image",
-    "src": "https://storage.googleapis.com/a1aa/image/57d3b7ea-af3e-4b4c-f6f8-0e6bf8afd237.jpg",
-    "alt": "Logo da Missão Tianwen-1 da China com planeta vermelho e espaçonave",
-    "text": "A missão chinesa Tianwen-1 continua explorando Marte com seu rover e orbitador, buscando sinais de vida passada e estudando a geologia marciana."
   }
 ]
