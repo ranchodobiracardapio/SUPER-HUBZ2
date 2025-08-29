@@ -41,6 +41,15 @@
     scrollbar-width: thin;
     scrollbar-color: rgba(100, 100, 100, 0.5) transparent;
    }
+   canvas {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+   }
   </style>
  </head>
  <body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
@@ -209,6 +218,7 @@
     </div>
    </div>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.min.js"></script>
   <script>
    const menuBtn = document.getElementById("menu-btn");
    const mobileMenu = document.getElementById("mobile-menu");
@@ -241,18 +251,25 @@
      article.setAttribute("role", "button");
      article.setAttribute("aria-pressed", "false");
      article.dataset.id = item.id;
+
+     // For news, show a thumbnail image or placeholder
+     let thumbHtml = "";
+     if (item.type === "image" && item.src) {
+      thumbHtml = `<img src="${item.src}" alt="${item.alt || item.title}" class="w-full h-36 object-cover" height="144" width="256" />`;
+     } else if (item.type === "video" && item.src) {
+      thumbHtml = `<video src="${item.src}" class="w-full h-36 object-cover" height="144" width="256" muted playsinline></video>`;
+     } else if (item.type === "pdf" && item.src) {
+      // Show a PDF icon placeholder
+      thumbHtml = `<img src="https://placehold.co/256x144/png?text=PDF" alt="Ícone representando documento PDF para ${item.title}" class="w-full h-36 object-contain bg-gray-700 p-6" height="144" width="256" />`;
+     } else {
+      thumbHtml = `<img src="https://placehold.co/256x144/png?text=Sem+imagem" alt="Sem imagem disponível para ${item.title}" class="w-full h-36 object-cover" height="144" width="256" />`;
+     }
+
      article.innerHTML = `
-      <img src="${item.image}" alt="${item.alt}" class="w-full h-36 object-cover" height="288" width="600" />
+      ${thumbHtml}
       <div class="p-3 flex flex-col flex-grow">
        <h3 class="text-base font-semibold mb-1 leading-tight">${item.title}</h3>
-       <p class="text-gray-300 flex-grow text-xs leading-snug">${item.description}</p>
-       <time class="mt-2 text-xs text-indigo-400 font-semibold" datetime="${item.date}">${new Date(
-      item.date
-     ).toLocaleDateString("pt-BR", {
-      day: "2-digit",
-      month: "long",
-      year: "numeric",
-     })}</time>
+       <p class="text-gray-300 flex-grow text-xs leading-snug">${item.text || ""}</p>
       </div>
      `;
      // Evento click para abrir artigo
@@ -362,22 +379,30 @@
    // Dados carregados
    let articlesData = [];
 
-   // Carregar e renderizar todos os dados
-   async function loadAllData() {
-    const [newsData, missionsData, galleryData, eventsData, articles] =
-     await Promise.all([
-      fetchJSON(urls.news),
-      fetchJSON(urls.missions),
-      fetchJSON(urls.gallery),
-      fetchJSON(urls.events),
-      fetchJSON(urls.articles),
-     ]);
+   // PDF.js worker setup
+   pdfjsLib.GlobalWorkerOptions.workerSrc =
+    "https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.9.179/pdf.worker.min.js";
 
-    if (newsData) renderNews(newsData);
-    if (missionsData) renderMissions(missionsData);
-    if (galleryData) renderGallery(galleryData);
-    if (eventsData) renderEvents(eventsData);
-    if (articles) articlesData = articles;
+   // Função para renderizar PDF em canvas
+   async function renderPDF(src, container) {
+    try {
+     const loadingTask = pdfjsLib.getDocument(src);
+     const pdf = await loadingTask.promise;
+     const page = await pdf.getPage(1);
+     const viewport = page.getViewport({ scale: 1.5 });
+     const canvas = document.createElement("canvas");
+     const context = canvas.getContext("2d");
+     canvas.height = viewport.height;
+     canvas.width = viewport.width;
+     await page.render({ canvasContext: context, viewport: viewport }).promise;
+     container.appendChild(canvas);
+    } catch (error) {
+     const errorMsg = document.createElement("p");
+     errorMsg.textContent = "Erro ao carregar o PDF.";
+     errorMsg.className = "text-red-500";
+     container.appendChild(errorMsg);
+     console.error(error);
+    }
    }
 
    // Abrir modal artigo
@@ -385,7 +410,7 @@
    const articleContent = document.getElementById("article-content");
    const closeBtn = document.getElementById("close-article");
 
-   function openArticle(id) {
+   async function openArticle(id) {
     const article = articlesData.find((a) => a.id === id);
     if (!article) return;
 
@@ -412,6 +437,9 @@
      video.controls = true;
      video.className = "rounded-lg mb-4 max-w-full mx-auto";
      articleContent.appendChild(video);
+    } else if (article.type === "pdf" && article.src) {
+     // Render PDF first page in canvas
+     await renderPDF(article.src, articleContent);
     }
 
     // Texto
@@ -439,6 +467,24 @@
      modal.classList.add("hidden");
     }
    });
+
+   // Carregar e renderizar todos os dados
+   async function loadAllData() {
+    const [newsData, missionsData, galleryData, eventsData, articles] =
+     await Promise.all([
+      fetchJSON(urls.news),
+      fetchJSON(urls.missions),
+      fetchJSON(urls.gallery),
+      fetchJSON(urls.events),
+      fetchJSON(urls.articles),
+     ]);
+
+    if (newsData) renderNews(newsData);
+    if (missionsData) renderMissions(missionsData);
+    if (galleryData) renderGallery(galleryData);
+    if (eventsData) renderEvents(eventsData);
+    if (articles) articlesData = articles;
+   }
 
    loadAllData();
   </script>
