@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Artemis III - Pouso na Lua",
+    "description": "A missão Artemis III da NASA tem como objetivo pousar astronautas no polo sul lunar, avançando a exploração humana da Lua.",
+    "launchDate": "Novembro de 2024",
+    "image": "https://storage.googleapis.com/a1aa/image/06e332e7-ccab-406e-5209-575330984c9e.jpg",
+    "alt": "Logo da Missão Artemis para a Lua mostrando uma lua estilizada e foguete"
+  },
+  {
+    "title": "Europa Clipper - Exploração da Lua de Júpiter",
+    "description": "A missão Europa Clipper investigará a habitabilidade da lua gelada Europa de Júpiter, estudando sua camada de gelo e oceano subterrâneo.",
+    "launchDate": "Outubro de 2024",
+    "image": "https://storage.googleapis.com/a1aa/image/a698c8da-047a-48a8-d78d-d81adf4f876d.jpg",
+    "alt": "Logo da Missão Europa Clipper apresentando a lua Europa de Júpiter e a espaçonave"
+  },
+  {
+    "title": "Telescópio Espacial James Webb - Missão Estendida",
+    "description": "O Telescópio Espacial James Webb continua a fornecer vistas sem precedentes do universo, com uma missão estendida planejada para explorar galáxias distantes.",
+    "launchDate": "Em andamento",
+    "image": "https://storage.googleapis.com/a1aa/image/0e444a1f-f0c8-4927-b973-72cd14f80237.jpg",
+    "alt": "Logo do Telescópio Espacial James Webb com um espelho hexagonal dourado"
+  },
+  {
+    "title": "SpaceX Starship - Missão Lunar",
+    "description": "A SpaceX planeja lançar a Starship para missões lunares tripuladas e de carga, abrindo caminho para a colonização espacial.",
+    "launchDate": "2025",
+    "image": "https://storage.googleapis.com/a1aa/image/e729e224-a64d-4d99-47cb-f00f3dfcc846.jpg",
+    "alt": "Logo da Missão SpaceX Starship com foguete estilizado e estrelas"
+  },
+  {
+    "title": "Tianwen-1 - Missão a Marte",
+    "description": "A missão chinesa Tianwen-1 continua explorando Marte com seu rover e orbitador, buscando sinais de vida passada e estudando a geologia marciana.",
+    "launchDate": "Em andamento",
+    "image": "https://storage.googleapis.com/a1aa/image/57d3b7ea-af3e-4b4c-f6f8-0e6bf8afd237.jpg",
+    "alt": "Logo da Missão Tianwen-1 da China com planeta vermelho e espaçonave"
+  }
+]
+```
