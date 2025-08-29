@@ -1,0 +1,45 @@
+[
+  {
+    "title": "Lançamento Histórico do Ônibus Espacial",
+    "description": "O mais recente lançamento do ônibus espacial marcou um marco histórico na exploração espacial, com nova tecnologia permitindo missões mais longas.",
+    "date": "2024-06-01",
+    "image": "https://storage.googleapis.com/a1aa/image/69269a59-848f-4804-1ff9-8e0f13c8e25f.jpg",
+    "alt": "Lançamento de ônibus espacial à noite com chamas brilhantes e fumaça"
+  },
+  {
+    "title": "Rover em Marte Descobre Novas Formações Rochosas",
+    "description": "O rover da NASA em Marte descobriu formações rochosas incomuns que podem fornecer pistas sobre a atividade passada de água no planeta.",
+    "date": "2024-05-28",
+    "image": "https://storage.googleapis.com/a1aa/image/c19397f8-97b7-45df-6913-d5df353de3e0.jpg",
+    "alt": "Rover em Marte explorando superfície rochosa vermelha com nuvens de poeira"
+  },
+  {
+    "title": "Novas Imagens do Telescópio Espacial Profundo",
+    "description": "O telescópio espacial profundo enviou imagens impressionantes de uma galáxia espiral distante, revelando novos insights sobre a formação de estrelas.",
+    "date": "2024-05-25",
+    "image": "https://storage.googleapis.com/a1aa/image/9aae4aa1-757c-4853-bb8d-150aa01337c8.jpg",
+    "alt": "Telescópio espacial capturando uma galáxia espiral com estrelas brilhantes e poeira cósmica"
+  },
+  {
+    "title": "Estação Espacial Internacional Celebra 25 Anos",
+    "description": "A ISS comemora 25 anos de presença humana contínua no espaço, apoiando pesquisas científicas e cooperação internacional.",
+    "date": "2024-05-20",
+    "image": "https://storage.googleapis.com/a1aa/image/a5f9de02-16f8-4471-ff9b-759b38f0b27b.jpg",
+    "alt": "Estação Espacial Internacional orbitando a Terra com oceanos azuis e nuvens brancas visíveis"
+  },
+  {
+    "title": "Nova Tecnologia de Satélites Melhora Comunicações",
+    "description": "Uma nova geração de satélites equipada com painéis solares avançados promete comunicações globais mais rápidas e confiáveis.",
+    "date": "2024-05-18",
+    "image": "https://storage.googleapis.com/a1aa/image/0c797028-26f2-4647-8050-cc648335e7e3.jpg",
+    "alt": "Satélite implantando painéis solares em órbita com a Terra ao fundo"
+  },
+  {
+    "title": "Caminhada Espacial Bem-Sucedida Repara Equipamento Crítico",
+    "description": "Astronautas completaram uma caminhada espacial para reparar equipamentos críticos, garantindo a operação contínua da estação espacial.",
+    "date": "2024-05-15",
+    "image": "https://storage.googleapis.com/a1aa/image/df2f1417-5098-46dd-bc5e-7acf71a81d33.jpg",
+    "alt": "Astronauta flutuando fora da espaçonave realizando uma caminhada espacial com a Terra ao fundo"
+  }
+]
+```
