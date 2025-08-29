@@ -1,0 +1,18 @@
+[
+  {
+    "title": "Conferência Internacional de Astronomia 2024",
+    "description": "Evento anual reunindo cientistas, astrônomos e entusiastas para discutir as últimas descobertas e tecnologias espaciais.",
+    "date": "15 a 18 de setembro de 2024"
+  },
+  {
+    "title": "Exposição de Tecnologia Espacial Futurista",
+    "description": "Exposição mostrando inovações em propulsão, robótica e exploração espacial, com demonstrações ao vivo.",
+    "date": "5 a 10 de novembro de 2024"
+  },
+  {
+    "title": "Observação Pública do Eclipse Solar",
+    "description": "Evento aberto ao público para observação segura do eclipse solar com telescópios e especialistas.",
+    "date": "2 de outubro de 2024"
+  }
+]
+```
