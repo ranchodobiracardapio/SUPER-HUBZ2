@@ -1,0 +1,88 @@
+[
+  {
+    "id": 1,
+    "title": "Lançamento Histórico do Ônibus Espacial",
+    "type": "image",
+    "src": "https://storage.googleapis.com/a1aa/image/69269a59-848f-4804-1ff9-8e0f13c8e25f.jpg",
+    "alt": "Lançamento de ônibus espacial à noite com chamas brilhantes e fumaça",
+    "text": "O lançamento do ônibus espacial marcou um marco histórico na exploração espacial, com novas tecnologias que permitem missões mais longas e seguras. Este evento representa um avanço significativo para a humanidade na conquista do espaço."
+  },
+  {
+    "id": 2,
+    "title": "Rover em Marte Descobre Novas Formações Rochosas",
+    "type": "image",
+    "src": "https://storage.googleapis.com/a1aa/image/c19397f8-97b7-45df-6913-d5df353de3e0.jpg",
+    "alt": "Rover em Marte explorando superfície rochosa vermelha com nuvens de poeira",
+    "text": "O rover da NASA em Marte descobriu formações rochosas incomuns que podem indicar a presença passada de água no planeta vermelho, abrindo novas possibilidades para a busca por vida extraterrestre."
+  },
+  {
+    "id": 3,
+    "title": "Novas Imagens do Telescópio Espacial Profundo",
+    "type": "image",
+    "src": "https://storage.googleapis.com/a1aa/image/9aae4aa1-757c-4853-bb8d-150aa01337c8.jpg",
+    "alt": "Telescópio espacial capturando uma galáxia espiral com estrelas brilhantes e poeira cósmica",
+    "text": "O telescópio espacial profundo enviou imagens impressionantes de uma galáxia espiral distante, revelando detalhes inéditos sobre a formação e evolução das estrelas."
+  },
+  {
+    "id": 4,
+    "title": "Estação Espacial Internacional Celebra 25 Anos",
+    "type": "video",
+    "src": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+    "text": "A Estação Espacial Internacional comemora 25 anos de presença humana contínua no espaço, servindo como um laboratório para pesquisas científicas e um símbolo de cooperação internacional."
+  },
+  {
+    "id": 5,
+    "title": "Nova Tecnologia de Satélites Melhora Comunicações",
+    "type": "image",
+    "src": "https://storage.googleapis.com/a1aa/image/0c797028-26f2-4647-8050-cc648335e7e3.jpg",
+    "alt": "Satélite implantando painéis solares em órbita com a Terra ao fundo",
+    "text": "Uma nova geração de satélites com painéis solares avançados promete melhorar significativamente a velocidade e a confiabilidade das comunicações globais."
+  },
+  {
+    "id": 6,
+    "title": "Caminhada Espacial Bem-Sucedida Repara Equipamento Crítico",
+    "type": "video",
+    "src": "https://sample-videos.com/video123/mp4/720/big_buck_bunny_720p_1mb.mp4",
+    "text": "Astronautas realizaram uma caminhada espacial para reparar equipamentos essenciais na estação espacial, garantindo a continuidade das operações e a segurança da tripulação."
+  },
+  {
+    "id": 7,
+    "title": "Artemis III - Pouso na Lua",
+    "type": "image",
+    "src": "https://storage.googleapis.com/a1aa/image/06e332e7-ccab-406e-5209-575330984c9e.jpg",
+    "alt": "Logo da Missão Artemis para a Lua mostrando uma lua estilizada e foguete",
+    "text": "A missão Artemis III da NASA visa pousar astronautas no polo sul lunar, marcando um novo capítulo na exploração humana da Lua."
+  },
+  {
+    "id": 8,
+    "title": "Europa Clipper - Exploração da Lua de Júpiter",
+    "type": "image",
+    "src": "https://storage.googleapis.com/a1aa/image/a698c8da-047a-48a8-d78d-d81adf4f876d.jpg",
+    "alt": "Logo da Missão Europa Clipper apresentando a lua Europa de Júpiter e a espaçonave",
+    "text": "A missão Europa Clipper investigará a habitabilidade da lua Europa, estudando sua camada de gelo e oceano subterrâneo em busca de sinais de vida."
+  },
+  {
+    "id": 9,
+    "title": "Telescópio Espacial James Webb - Missão Estendida",
+    "type": "image",
+    "src": "https://storage.googleapis.com/a1aa/image/0e444a1f-f0c8-4927-b973-72cd14f80237.jpg",
+    "alt": "Logo do Telescópio Espacial James Webb com um espelho hexagonal dourado",
+    "text": "O Telescópio Espacial James Webb continua a explorar o universo, fornecendo imagens e dados sem precedentes sobre galáxias distantes."
+  },
+  {
+    "id": 10,
+    "title": "SpaceX Starship - Missão Lunar",
+    "type": "image",
+    "src": "https://storage.googleapis.com/a1aa/image/e729e224-a64d-4d99-47cb-f00f3dfcc846.jpg",
+    "alt": "Logo da Missão SpaceX Starship com foguete estilizado e estrelas",
+    "text": "A SpaceX planeja lançar a Starship para missões lunares tripuladas e de carga, abrindo caminho para a colonização espacial."
+  },
+  {
+    "id": 11,
+    "title": "Tianwen-1 - Missão a Marte",
+    "type": "image",
+    "src": "https://storage.googleapis.com/a1aa/image/57d3b7ea-af3e-4b4c-f6f8-0e6bf8afd237.jpg",
+    "alt": "Logo da Missão Tianwen-1 da China com planeta vermelho e espaçonave",
+    "text": "A missão chinesa Tianwen-1 continua explorando Marte com seu rover e orbitador, buscando sinais de vida passada e estudando a geologia marciana."
+  }
+]
