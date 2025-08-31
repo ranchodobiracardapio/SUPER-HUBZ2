@@ -53,7 +53,7 @@
   </style>
  </head>
  <body class="bg-gray-900 text-gray-100 min-h-screen flex flex-col">
-  <header class="bg-gray-800 shadow-md">
+  <header class="bg-gray-800 shadow-md relative z-50">
    <div
     class="container mx-auto max-w-7xl px-3 py-2 flex items-center justify-between"
    >
@@ -75,6 +75,7 @@
      <a class="hover:text-indigo-400 transition" href="#">Contato</a>
      <a class="hover:text-indigo-400 transition" href="#">Galeria</a>
      <a class="hover:text-indigo-400 transition" href="#">Eventos</a>
+     <a class="hover:text-indigo-400 transition" href="teologia.html">Teologia</a>
     </nav>
     <button
      aria-label="Alternar menu"
@@ -84,47 +85,65 @@
      <i class="fas fa-bars fa-lg"></i>
     </button>
    </div>
+   <!-- Sidebar mobile -->
    <nav
     aria-label="Navegação móvel"
-    class="md:hidden bg-gray-800 px-3 py-1 space-y-1 hidden"
     id="mobile-menu"
+    class="fixed top-0 right-0 h-full w-64 bg-gray-800 shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out md:hidden flex flex-col p-4 space-y-4 z-50"
    >
+    <button
+     aria-label="Fechar menu"
+     id="menu-close-btn"
+     class="self-end text-gray-300 hover:text-indigo-400 focus:outline-none text-2xl"
+    >
+     &times;
+    </button>
     <a
-     class="block py-1 px-2 rounded text-xs hover:bg-indigo-600 transition"
+     class="block py-2 px-3 rounded text-sm hover:bg-indigo-600 transition font-semibold"
      href="#"
      >Início</a
     >
     <a
-     class="block py-1 px-2 rounded text-xs hover:bg-indigo-600 transition"
+     class="block py-2 px-3 rounded text-sm hover:bg-indigo-600 transition font-semibold"
      href="#"
      >Missões</a
     >
     <a
-     class="block py-1 px-2 rounded text-xs hover:bg-indigo-600 transition"
+     class="block py-2 px-3 rounded text-sm hover:bg-indigo-600 transition font-semibold"
      href="#"
      >Astronomia</a
     >
     <a
-     class="block py-1 px-2 rounded text-xs hover:bg-indigo-600 transition"
+     class="block py-2 px-3 rounded text-sm hover:bg-indigo-600 transition font-semibold"
      href="#"
      >Tecnologia</a
     >
     <a
-     class="block py-1 px-2 rounded text-xs hover:bg-indigo-600 transition"
+     class="block py-2 px-3 rounded text-sm hover:bg-indigo-600 transition font-semibold"
      href="#"
      >Contato</a
     >
     <a
-     class="block py-1 px-2 rounded text-xs hover:bg-indigo-600 transition"
+     class="block py-2 px-3 rounded text-sm hover:bg-indigo-600 transition font-semibold"
      href="#"
      >Galeria</a
     >
     <a
-     class="block py-1 px-2 rounded text-xs hover:bg-indigo-600 transition"
+     class="block py-2 px-3 rounded text-sm hover:bg-indigo-600 transition font-semibold"
      href="#"
      >Eventos</a
     >
+    <a
+     class="block py-2 px-3 rounded text-sm hover:bg-indigo-600 transition font-semibold"
+     href="teologia.html"
+     >Teologia</a
+    >
    </nav>
+   <!-- Overlay -->
+   <div
+    id="mobile-menu-overlay"
+    class="fixed inset-0 bg-black bg-opacity-50 hidden md:hidden z-40"
+   ></div>
   </header>
   <main class="flex-grow container mx-auto max-w-7xl px-3 py-4">
    <section class="mb-6">
@@ -222,9 +241,41 @@
   <script>
    const menuBtn = document.getElementById("menu-btn");
    const mobileMenu = document.getElementById("mobile-menu");
+   const menuCloseBtn = document.getElementById("menu-close-btn");
+   const mobileMenuOverlay = document.getElementById("mobile-menu-overlay");
+
+   function openMobileMenu() {
+    mobileMenu.classList.remove("translate-x-full");
+    mobileMenu.classList.add("translate-x-0");
+    mobileMenuOverlay.classList.remove("hidden");
+    // Prevent body scroll when menu is open
+    document.body.style.overflow = "hidden";
+   }
+
+   function closeMobileMenu() {
+    mobileMenu.classList.add("translate-x-full");
+    mobileMenu.classList.remove("translate-x-0");
+    mobileMenuOverlay.classList.add("hidden");
+    document.body.style.overflow = "";
+   }
 
    menuBtn.addEventListener("click", () => {
-    mobileMenu.classList.toggle("hidden");
+    openMobileMenu();
+   });
+
+   menuCloseBtn.addEventListener("click", () => {
+    closeMobileMenu();
+   });
+
+   mobileMenuOverlay.addEventListener("click", () => {
+    closeMobileMenu();
+   });
+
+   // Close menu on ESC key
+   window.addEventListener("keydown", (e) => {
+    if (e.key === "Escape" && !mobileMenu.classList.contains("translate-x-full")) {
+     closeMobileMenu();
+    }
    });
 
    // Função para carregar JSON externo
