@@ -1,0 +1,677 @@
+<html class="scroll-smooth" lang="pt-BR">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+  <title>
+   Teologia – O Estudo do Divino
+  </title>
+  <script src="https://cdn.tailwindcss.com">
+  </script>
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&amp;family=Open+Sans&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
+  <style>
+   body {
+      font-family: 'Open Sans', sans-serif;
+    }
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Merriweather', serif;
+    }
+    /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+    }
+    /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+    }
+  </style>
+ </head>
+ <body class="bg-white text-gray-800 min-h-screen flex flex-col">
+  <!-- Header -->
+  <header class="bg-gradient-to-r from-blue-900 via-blue-800 to-blue-700 text-white shadow-md sticky top-0 z-50">
+   <div class="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 flex items-center justify-between py-2">
+    <a class="text-xl sm:text-2xl font-bold tracking-wide select-none" href="#">
+     Teologia – O Estudo do Divino
+    </a>
+    <button aria-label="Abrir menu lateral" class="lg:hidden text-white text-xl sm:text-2xl focus:outline-none" id="openSidebarBtn" type="button">
+     <i class="fas fa-bars"></i>
+    </button>
+   </div>
+  </header>
+  <!-- Sidebar -->
+  <aside aria-label="Menu lateral" class="fixed top-0 right-0 h-full w-56 sm:w-64 bg-blue-900 text-white shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-60" id="sidebar">
+   <div class="flex items-center justify-between px-4 sm:px-6 py-3 border-b border-blue-800">
+    <h2 class="text-lg sm:text-xl font-semibold">
+     Menu
+    </h2>
+    <button aria-label="Fechar menu lateral" class="text-white text-xl sm:text-2xl focus:outline-none" id="closeSidebarBtn" type="button">
+     <i class="fas fa-times"></i>
+    </button>
+   </div>
+   <nav class="px-4 sm:px-6 py-3">
+    <ul class="flex flex-col gap-4 text-base sm:text-lg font-semibold">
+     <li>
+      <a class="hover:text-gold-400 transition-colors duration-300 block" href="#inicio" onclick="closeSidebar()">
+       Início
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-gold-400 transition-colors duration-300 block" href="#religioes" onclick="closeSidebar()">
+       Religiões
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-gold-400 transition-colors duration-300 block" href="#mitologias" onclick="closeSidebar()">
+       Mitologias
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-gold-400 transition-colors duration-300 block" href="#filosofia" onclick="closeSidebar()">
+       Filosofia
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-gold-400 transition-colors duration-300 block" href="#ciencia" onclick="closeSidebar()">
+       Ciência e Espiritualidade
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-gold-400 transition-colors duration-300 block" href="#biblioteca" onclick="closeSidebar()">
+       Biblioteca Digital
+      </a>
+     </li>
+     <li>
+      <a class="hover:text-gold-400 transition-colors duration-300 block" href="#comunidade" onclick="closeSidebar()">
+       Fórum/Comunidade
+      </a>
+     </li>
+    </ul>
+   </nav>
+  </aside>
+  <!-- Overlay -->
+  <div aria-hidden="true" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50" id="overlay"></div>
+  <main class="flex-grow">
+   <!-- Hero Section -->
+   <section class="bg-gradient-to-r from-blue-50 to-white py-12 px-4 sm:px-8 lg:px-16 text-center" id="inicio">
+    <h1 class="text-3xl sm:text-4xl font-serif font-bold text-blue-900 max-w-3xl mx-auto leading-tight mb-4">
+     Um espaço de estudo e reflexão sobre Deus, deuses, espiritualidade e transcendência nas mais diversas culturas e épocas.
+    </h1>
+    <p class="text-base sm:text-lg text-blue-700 max-w-2xl mx-auto mb-8 italic">
+     Sem dogmas, sem fronteiras, apenas conhecimento.
+    </p>
+    <div class="flex flex-col sm:flex-row justify-center gap-4 max-w-sm mx-auto">
+     <a class="bg-blue-900 hover:bg-blue-800 text-white font-semibold py-2 px-4 rounded shadow-md transition-colors duration-300" href="#religioes">
+      Explorar Religiões
+     </a>
+     <a class="bg-blue-700 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded shadow-md transition-colors duration-300" href="#mitologias">
+      Estudar Mitologias
+     </a>
+     <a class="bg-blue-600 hover:bg-blue-500 text-white font-semibold py-2 px-4 rounded shadow-md transition-colors duration-300" href="#comparacoes">
+      Ver Comparações
+     </a>
+    </div>
+   </section>
+   <!-- Conteúdos Section -->
+   <section class="max-w-7xl mx-auto px-4 sm:px-8 lg:px-16 py-12 space-y-16">
+    <!-- Religiões -->
+    <article class="space-y-4" id="religioes">
+     <h2 class="text-2xl sm:text-3xl font-serif font-bold text-blue-900 border-b-4 border-gold-400 inline-block pb-1 mb-4">
+      Religiões
+     </h2>
+     <p class="text-base sm:text-lg text-gray-700 max-w-3xl">
+      Cristianismo, Judaísmo, Islamismo, Hinduísmo, Budismo, Religiões Africanas, Indígenas etc. Explicações neutras: origem, principais conceitos de Deus, textos sagrados, visão da alma, pós-vida.
+     </p>
+     <div class="flex space-x-4 overflow-x-auto no-scrollbar py-2 -mx-4 px-4">
+      <div class="flex-shrink-0 bg-white rounded-lg shadow-md p-4 border border-gray-200 w-64">
+       <img alt="Imagem de uma antiga igreja cristã com vitrais coloridos e arquitetura gótica" class="rounded mb-2 w-full h-36 object-cover" height="150" src="https://storage.googleapis.com/a1aa/image/46850422-df84-4854-f090-b2bff1084577.jpg" width="300"/>
+       <h3 class="text-lg font-semibold text-blue-800 mb-1">
+        Cristianismo
+       </h3>
+       <p class="text-gray-700 text-xs sm:text-sm leading-relaxed">
+        Origem no século I, crença em um Deus único e trino, textos sagrados como a Bíblia, visão da alma imortal e vida após a morte no céu ou inferno.
+       </p>
+      </div>
+      <div class="flex-shrink-0 bg-white rounded-lg shadow-md p-4 border border-gray-200 w-64">
+       <img alt="Imagem de uma sinagoga judaica tradicional com a estrela de Davi na fachada" class="rounded mb-2 w-full h-36 object-cover" height="150" src="https://storage.googleapis.com/a1aa/image/e1aef809-1d2a-4170-5d5a-0ba445a12243.jpg" width="300"/>
+       <h3 class="text-lg font-semibold text-blue-800 mb-1">
+        Judaísmo
+       </h3>
+       <p class="text-gray-700 text-xs sm:text-sm leading-relaxed">
+        Religião monoteísta antiga, com a Torá como texto sagrado, foco na aliança com Deus e conceitos de alma e justiça divina.
+       </p>
+      </div>
+      <div class="flex-shrink-0 bg-white rounded-lg shadow-md p-4 border border-gray-200 w-64">
+       <img alt="Imagem de uma mesquita islâmica com minarete e cúpula, céu azul ao fundo" class="rounded mb-2 w-full h-36 object-cover" height="150" src="https://storage.googleapis.com/a1aa/image/50a850e4-2397-478a-379a-c85eaabf60cf.jpg" width="300"/>
+       <h3 class="text-lg font-semibold text-blue-800 mb-1">
+        Islamismo
+       </h3>
+       <p class="text-gray-700 text-xs sm:text-sm leading-relaxed">
+        Religião monoteísta fundada no século VII, com o Alcorão como texto sagrado, crença em Allah e vida após a morte com paraíso e inferno.
+       </p>
+      </div>
+      <div class="flex-shrink-0 bg-white rounded-lg shadow-md p-4 border border-gray-200 w-64">
+       <img alt="Imagem de um templo hindu colorido com esculturas de deuses e detalhes ornamentais" class="rounded mb-2 w-full h-36 object-cover" height="150" src="https://storage.googleapis.com/a1aa/image/22257bcd-45f0-4ce6-fe49-0d73537a95d6.jpg" width="300"/>
+       <h3 class="text-lg font-semibold text-blue-800 mb-1">
+        Hinduísmo
+       </h3>
+       <p class="text-gray-700 text-xs sm:text-sm leading-relaxed">
+        Tradição pluralista com múltiplos deuses, textos como os Vedas e Bhagavad Gita, crença em reencarnação e karma.
+       </p>
+      </div>
+      <div class="flex-shrink-0 bg-white rounded-lg shadow-md p-4 border border-gray-200 w-64">
+       <img alt="Imagem de um templo budista com estátua dourada de Buda e jardins ao redor" class="rounded mb-2 w-full h-36 object-cover" height="150" src="https://storage.googleapis.com/a1aa/image/739d62ea-e6e6-4901-b45b-5fabc9bbd738.jpg" width="300"/>
+       <h3 class="text-lg font-semibold text-blue-800 mb-1">
+        Budismo
+       </h3>
+       <p class="text-gray-700 text-xs sm:text-sm leading-relaxed">
+        Filosofia e religião focada no despertar, ensinamentos de Buda, ciclo de renascimentos e busca pelo nirvana.
+       </p>
+      </div>
+      <div class="flex-shrink-0 bg-white rounded-lg shadow-md p-4 border border-gray-200 w-64">
+       <img alt="Imagem de uma cerimônia religiosa africana com pessoas em trajes tradicionais e símbolos espirituais" class="rounded mb-2 w-full h-36 object-cover" height="150" src="https://storage.googleapis.com/a1aa/image/1ef05907-8edb-46b4-ee08-1e042f7f9ce2.jpg" width="300"/>
+       <h3 class="text-lg font-semibold text-blue-800 mb-1">
+        Religiões Africanas e Indígenas
+       </h3>
+       <p class="text-gray-700 text-xs sm:text-sm leading-relaxed">
+        Diversas tradições com crenças em espíritos, ancestrais, rituais e conexão profunda com a natureza.
+       </p>
+      </div>
+     </div>
+    </article>
+    <!-- Mitologias -->
+    <article class="space-y-4" id="mitologias">
+     <h2 class="text-2xl sm:text-3xl font-serif font-bold text-blue-900 border-b-4 border-gold-400 inline-block pb-1 mb-4">
+      Mitologias
+     </h2>
+     <p class="text-base sm:text-lg text-gray-700 max-w-3xl mb-6">
+      Grega, Nórdica, Egípcia, Mesopotâmica, Celta, Japonesa, etc. Apresentar deuses como arquétipos, símbolos, influências culturais.
+     </p>
+     <div class="flex space-x-3 overflow-x-auto no-scrollbar py-2 -mx-4 px-4">
+      <div class="flex-shrink-0 w-44 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+       <img alt="Imagem de uma estátua clássica de Zeus, deus grego do trovão, com raios na mão" class="w-full h-32 object-cover" height="130" src="https://storage.googleapis.com/a1aa/image/10a43716-fdb6-44eb-2ecd-1ed1c0917c58.jpg" width="280"/>
+       <div class="p-3 flex flex-col">
+        <h3 class="text-md font-semibold text-blue-800 mb-1 truncate">
+         Mitologia Grega
+        </h3>
+        <p class="text-gray-700 text-xs leading-tight line-clamp-3">
+         Deuses como Zeus, Atena e Hades representam forças da natureza e arquétipos humanos, com histórias ricas e simbólicas.
+        </p>
+       </div>
+      </div>
+      <div class="flex-shrink-0 w-44 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+       <img alt="Imagem do martelo de Thor, símbolo da mitologia nórdica, com fundo de floresta e neve" class="w-full h-32 object-cover" height="130" src="https://storage.googleapis.com/a1aa/image/cbeda625-750e-4538-2f6b-8ba30fd38908.jpg" width="280"/>
+       <div class="p-3 flex flex-col">
+        <h3 class="text-md font-semibold text-blue-800 mb-1 truncate">
+         Mitologia Nórdica
+        </h3>
+        <p class="text-gray-700 text-xs leading-tight line-clamp-3">
+         Deuses guerreiros como Odin e Thor, mitos sobre o destino e o Ragnarok, símbolos de força e sabedoria.
+        </p>
+       </div>
+      </div>
+      <div class="flex-shrink-0 w-44 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+       <img alt="Imagem do Olho de Hórus, símbolo egípcio de proteção e poder espiritual" class="w-full h-32 object-cover" height="130" src="https://storage.googleapis.com/a1aa/image/cdc6c013-4629-46bd-5221-3c83c88623ad.jpg" width="280"/>
+       <div class="p-3 flex flex-col">
+        <h3 class="text-md font-semibold text-blue-800 mb-1 truncate">
+         Mitologia Egípcia
+        </h3>
+        <p class="text-gray-700 text-xs leading-tight line-clamp-3">
+         Deuses como Rá, Ísis e Osíris, com mitos sobre vida, morte e renascimento, e símbolos espirituais profundos.
+        </p>
+       </div>
+      </div>
+      <div class="flex-shrink-0 w-44 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+       <img alt="Imagem de uma estátua antiga de Marduk, deus mesopotâmico, com escrita cuneiforme ao fundo" class="w-full h-32 object-cover" height="130" src="https://storage.googleapis.com/a1aa/image/9b976995-74d3-453c-84c6-cd7795cc924f.jpg" width="280"/>
+       <div class="p-3 flex flex-col">
+        <h3 class="text-md font-semibold text-blue-800 mb-1 truncate">
+         Mitologia Mesopotâmica
+        </h3>
+        <p class="text-gray-700 text-xs leading-tight line-clamp-3">
+         Mitos fundadores da civilização, deuses como Marduk e Ishtar, e histórias sobre criação e ordem cósmica.
+        </p>
+       </div>
+      </div>
+      <div class="flex-shrink-0 w-44 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+       <img alt="Imagem de símbolos celtas antigos entalhados em pedra, com nós e espirais" class="w-full h-32 object-cover" height="130" src="https://storage.googleapis.com/a1aa/image/ada05b1d-eee7-4284-a4a4-c08afca7bff2.jpg" width="280"/>
+       <div class="p-3 flex flex-col">
+        <h3 class="text-md font-semibold text-blue-800 mb-1 truncate">
+         Mitologia Celta
+        </h3>
+        <p class="text-gray-700 text-xs leading-tight line-clamp-3">
+         Deuses e espíritos da natureza, mitos sobre heróis e ciclos da vida, com forte ligação à terra e ao sagrado.
+        </p>
+       </div>
+      </div>
+      <div class="flex-shrink-0 w-44 bg-white rounded-lg shadow-md border border-gray-200 overflow-hidden hover:shadow-lg transition-shadow duration-300">
+       <img alt="Imagem de um templo xintoísta japonês tradicional com torii vermelho e árvores ao redor" class="w-full h-32 object-cover" height="130" src="https://storage.googleapis.com/a1aa/image/18d8de2c-f83b-4301-5ca8-ba8e69256fe7.jpg" width="280"/>
+       <div class="p-3 flex flex-col">
+        <h3 class="text-md font-semibold text-blue-800 mb-1 truncate">
+         Mitologia Japonesa
+        </h3>
+        <p class="text-gray-700 text-xs leading-tight line-clamp-3">
+         Deuses kami, histórias de criação e espíritos da natureza, com forte presença em rituais e cultura japonesa.
+        </p>
+       </div>
+      </div>
+     </div>
+    </article>
+    <!-- Filosofia da Religião -->
+    <article class="space-y-4" id="filosofia">
+     <h2 class="text-2xl sm:text-3xl font-serif font-bold text-blue-900 border-b-4 border-gold-400 inline-block pb-1 mb-4">
+      Filosofia da Religião
+     </h2>
+     <p class="text-base sm:text-lg text-gray-700 max-w-3xl">
+      Platão, Aristóteles, Tomás de Aquino, Nietzsche, Jung. Questões como: “O que é Deus?”, “Existe uma alma?”, “Religião e razão podem dialogar?”.
+     </p>
+     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      <div class="bg-white rounded-lg shadow-md p-4 border border-gray-200 flex flex-col">
+       <img alt="Imagem de uma estátua clássica de Platão, filósofo grego, com toga e expressão pensativa" class="rounded mb-2 w-full h-36 object-cover" height="150" src="https://storage.googleapis.com/a1aa/image/3e51571f-dd5d-4a2c-e443-164ccece67fd.jpg" width="300"/>
+       <h3 class="text-lg font-semibold text-blue-800 mb-1">
+        Platão
+       </h3>
+       <p class="text-gray-700 text-xs sm:text-sm leading-relaxed flex-grow">
+        Definiu ideias sobre o mundo das formas e a alma imortal, influenciando a filosofia da religião ocidental.
+       </p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-4 border border-gray-200 flex flex-col">
+       <img alt="Imagem de uma estátua clássica de Aristóteles, filósofo grego, segurando um pergaminho" class="rounded mb-2 w-full h-36 object-cover" height="150" src="https://storage.googleapis.com/a1aa/image/32299b9e-269a-482f-1886-985e91a88b15.jpg" width="300"/>
+       <h3 class="text-lg font-semibold text-blue-800 mb-1">
+        Aristóteles
+       </h3>
+       <p class="text-gray-700 text-xs sm:text-sm leading-relaxed flex-grow">
+        Enfatizou a lógica e a causa primeira, base para muitos argumentos filosóficos sobre Deus.
+       </p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-4 border border-gray-200 flex flex-col">
+       <img alt="Imagem de uma pintura medieval de Tomás de Aquino, teólogo e filósofo cristão, com livro e auréola" class="rounded mb-2 w-full h-36 object-cover" height="150" src="https://storage.googleapis.com/a1aa/image/b8d2844d-69eb-4fa6-de60-772ecc5713f9.jpg" width="300"/>
+       <h3 class="text-lg font-semibold text-blue-800 mb-1">
+        Tomás de Aquino
+       </h3>
+       <p class="text-gray-700 text-xs sm:text-sm leading-relaxed flex-grow">
+        Integra fé e razão, formulando provas da existência de Deus e conceitos teológicos.
+       </p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-4 border border-gray-200 flex flex-col">
+       <img alt="Imagem de um retrato clássico de Friedrich Nietzsche, filósofo alemão do século XIX, com bigode marcante" class="rounded mb-2 w-full h-36 object-cover" height="150" src="https://storage.googleapis.com/a1aa/image/f5007960-ee6e-4d71-7ccd-aa0c9d291974.jpg" width="300"/>
+       <h3 class="text-lg font-semibold text-blue-800 mb-1">
+        Nietzsche
+       </h3>
+       <p class="text-gray-700 text-xs sm:text-sm leading-relaxed flex-grow">
+        Crítico da religião tradicional, famoso pela frase “Deus está morto” e análise da moralidade.
+       </p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-4 border border-gray-200 flex flex-col">
+       <img alt="Imagem de Carl Jung, psicólogo suíço, com expressão pensativa e fundo de símbolos arquetípicos" class="rounded mb-2 w-full h-36 object-cover" height="150" src="https://storage.googleapis.com/a1aa/image/f05ebfd1-7843-4821-69a6-51f6e52dd150.jpg" width="300"/>
+       <h3 class="text-lg font-semibold text-blue-800 mb-1">
+        Carl Jung
+       </h3>
+       <p class="text-gray-700 text-xs sm:text-sm leading-relaxed flex-grow">
+        Introduziu conceitos de arquétipos e inconsciente coletivo, relacionando psicologia e espiritualidade.
+       </p>
+      </div>
+     </div>
+    </article>
+    <!-- Ciência e Espiritualidade -->
+    <article class="space-y-4" id="ciencia">
+     <h2 class="text-2xl sm:text-3xl font-serif font-bold text-blue-900 border-b-4 border-gold-400 inline-block pb-1 mb-4">
+      Ciência e Espiritualidade
+     </h2>
+     <p class="text-base sm:text-lg text-gray-700 max-w-3xl">
+      Estudos em neurociência, psicologia da religião, física e cosmologia. Comparar visões espirituais e científicas sobre origem e destino da vida.
+     </p>
+     <div class="grid grid-cols-1 sm:grid-cols-3 gap-6">
+      <div class="bg-white rounded-lg shadow-md p-4 border border-gray-200 flex flex-col">
+       <img alt="Imagem detalhada de neurônios e conexões cerebrais iluminadas em azul e dourado" class="rounded mb-2 w-full h-36 object-cover" height="150" src="https://storage.googleapis.com/a1aa/image/7f4ce757-a6b0-4f78-3978-5dd12367e697.jpg" width="300"/>
+       <h3 class="text-lg font-semibold text-blue-800 mb-1">
+        Neurociência
+       </h3>
+       <p class="text-gray-700 text-xs sm:text-sm leading-relaxed flex-grow">
+        Estudo do cérebro e suas relações com experiências espirituais e estados de consciência.
+       </p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-4 border border-gray-200 flex flex-col">
+       <img alt="Imagem de uma pessoa meditando com gráficos de ondas cerebrais e símbolos espirituais ao redor" class="rounded mb-2 w-full h-36 object-cover" height="150" src="https://storage.googleapis.com/a1aa/image/15e4dd8d-f9bc-4cd4-1ec1-891e2cd9d918.jpg" width="300"/>
+       <h3 class="text-lg font-semibold text-blue-800 mb-1">
+        Psicologia da Religião
+       </h3>
+       <p class="text-gray-700 text-xs sm:text-sm leading-relaxed flex-grow">
+        Análise dos efeitos psicológicos da fé, rituais e crenças na mente humana.
+       </p>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-4 border border-gray-200 flex flex-col">
+       <img alt="Imagem do universo com galáxias, estrelas e fórmulas físicas sobrepostas" class="rounded mb-2 w-full h-36 object-cover" height="150" src="https://storage.googleapis.com/a1aa/image/f0cdc42a-85c3-485f-de06-f6e85149b504.jpg" width="300"/>
+       <h3 class="text-lg font-semibold text-blue-800 mb-1">
+        Física e Cosmologia
+       </h3>
+       <p class="text-gray-700 text-xs sm:text-sm leading-relaxed flex-grow">
+        Exploração científica da origem do cosmos e suas possíveis conexões com conceitos espirituais.
+       </p>
+      </div>
+     </div>
+    </article>
+    <!-- Ferramentas Interativas -->
+    <section class="space-y-8" id="comparacoes">
+     <h2 class="text-2xl sm:text-3xl font-serif font-bold text-blue-900 border-b-4 border-gold-400 inline-block pb-1 mb-4">
+      Ferramentas Interativas
+     </h2>
+     <div class="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      <!-- Mapa das Religiões do Mundo -->
+      <div class="bg-white rounded-lg shadow-md border border-gray-200 p-4 flex flex-col">
+       <h3 class="text-xl font-semibold text-blue-800 mb-3 flex items-center gap-2">
+        <i class="fas fa-globe-americas text-gold-400 text-lg"></i>
+        Mapa das Religiões do Mundo
+       </h3>
+       <img alt="Mapa mundi colorido destacando as principais religiões predominantes em cada região do mundo" class="rounded mb-3 w-full object-cover" height="200" src="https://storage.googleapis.com/a1aa/image/2503b3a8-fadd-4018-f0ba-14aed9dbe80d.jpg" width="400"/>
+       <p class="text-gray-700 flex-grow text-sm">
+        Clique em um país para ver as crenças predominantes e suas características.
+       </p>
+       <button class="mt-3 bg-blue-700 hover:bg-blue-600 text-white font-semibold py-1.5 px-3 rounded self-start transition-colors duration-300 text-sm">
+        Explorar Mapa
+       </button>
+      </div>
+      <!-- Linha do Tempo das Religiões e Mitologias -->
+      <div class="bg-white rounded-lg shadow-md border border-gray-200 p-4 flex flex-col">
+       <h3 class="text-xl font-semibold text-blue-800 mb-3 flex items-center gap-2">
+        <i class="fas fa-stream text-gold-400 text-lg"></i>
+        Linha do Tempo das Religiões e Mitologias
+       </h3>
+       <img alt="Linha do tempo histórica mostrando o surgimento das principais religiões e mitologias ao longo dos séculos" class="rounded mb-3 w-full object-cover" height="200" src="https://storage.googleapis.com/a1aa/image/732fd525-4c99-4f0f-469c-b2dec2683a4f.jpg" width="400"/>
+       <p class="text-gray-700 flex-grow text-sm">
+        Visualize a evolução e intersecções das tradições espirituais ao longo da história.
+       </p>
+       <button class="mt-3 bg-blue-700 hover:bg-blue-600 text-white font-semibold py-1.5 px-3 rounded self-start transition-colors duration-300 text-sm">
+        Ver Linha do Tempo
+       </button>
+      </div>
+      <!-- Comparador de Conceitos -->
+      <div class="bg-white rounded-lg shadow-md border border-gray-200 p-4 flex flex-col">
+       <h3 class="text-xl font-semibold text-blue-800 mb-3 flex items-center gap-2">
+        <i class="fas fa-balance-scale text-gold-400 text-lg"></i>
+        Comparador de Conceitos
+       </h3>
+       <img alt="Imagem ilustrativa mostrando comparação entre conceitos de Deus no Cristianismo, Brahman no Hinduísmo e Tao no Taoísmo" class="rounded mb-3 w-full object-cover" height="200" src="https://storage.googleapis.com/a1aa/image/4dfcbc47-6274-4791-4f02-552d5ed903f0.jpg" width="400"/>
+       <p class="text-gray-700 flex-grow text-sm">
+        Compare ideias centrais de diferentes tradições para um entendimento plural e profundo.
+       </p>
+       <button class="mt-3 bg-blue-700 hover:bg-blue-600 text-white font-semibold py-1.5 px-3 rounded self-start transition-colors duration-300 text-sm">
+        Usar Comparador
+       </button>
+      </div>
+     </div>
+    </section>
+    <!-- Biblioteca Digital -->
+    <section class="space-y-8" id="biblioteca">
+     <h2 class="text-2xl sm:text-3xl font-serif font-bold text-blue-900 border-b-4 border-gold-400 inline-block pb-1 mb-4">
+      Biblioteca Digital
+     </h2>
+     <p class="text-base sm:text-lg text-gray-700 max-w-3xl">
+      Textos sagrados em domínio público (Bhagavad Gita, Bíblia, Alcorão em trechos, Edda, mitos gregos, Popol Vuh, etc). Ensaios e artigos sobre filosofia da religião.
+     </p>
+     <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      <article class="bg-white rounded-lg shadow-md border border-gray-200 p-4 flex flex-col">
+       <img alt="Imagem de um manuscrito antigo do Bhagavad Gita com escrita sânscrita e ornamentos dourados" class="rounded mb-2 w-full h-36 object-cover" height="150" src="https://storage.googleapis.com/a1aa/image/88f2ec4f-a553-4b5c-2b62-9a5c7141722d.jpg" width="300"/>
+       <h3 class="text-lg font-semibold text-blue-800 mb-1">
+        Bhagavad Gita
+       </h3>
+       <p class="text-gray-700 text-xs sm:text-sm flex-grow leading-relaxed">
+        Texto sagrado hindu que apresenta diálogo entre Arjuna e Krishna sobre dever, espiritualidade e dharma.
+       </p>
+       <a class="mt-2 text-blue-700 hover:underline font-semibold self-start text-sm" href="#">
+        Ler trecho
+       </a>
+      </article>
+      <article class="bg-white rounded-lg shadow-md border border-gray-200 p-4 flex flex-col">
+       <img alt="Imagem de uma antiga Bíblia em papiro com texto em latim e cruz dourada ao lado" class="rounded mb-2 w-full h-36 object-cover" height="150" src="https://storage.googleapis.com/a1aa/image/ccf34973-216c-423a-06c7-3e993d6fa32d.jpg" width="300"/>
+       <h3 class="text-lg font-semibold text-blue-800 mb-1">
+        Bíblia
+       </h3>
+       <p class="text-gray-700 text-xs sm:text-sm flex-grow leading-relaxed">
+        Coletânea de textos sagrados do Cristianismo, incluindo Antigo e Novo Testamento.
+       </p>
+       <a class="mt-2 text-blue-700 hover:underline font-semibold self-start text-sm" href="#">
+        Ler trecho
+       </a>
+      </article>
+      <article class="bg-white rounded-lg shadow-md border border-gray-200 p-4 flex flex-col">
+       <img alt="Imagem de um manuscrito do Alcorão com escrita árabe caligráfica e decoração tradicional" class="rounded mb-2 w-full h-36 object-cover" height="150" src="https://storage.googleapis.com/a1aa/image/e1cc1910-437e-4741-9acf-d2b1c4dcdd90.jpg" width="300"/>
+       <h3 class="text-lg font-semibold text-blue-800 mb-1">
+        Alcorão
+       </h3>
+       <p class="text-gray-700 text-xs sm:text-sm flex-grow leading-relaxed">
+        Texto sagrado do Islã, revelações feitas ao profeta Maomé, base da fé muçulmana.
+       </p>
+       <a class="mt-2 text-blue-700 hover:underline font-semibold self-start text-sm" href="#">
+        Ler trecho
+       </a>
+      </article>
+      <article class="bg-white rounded-lg shadow-md border border-gray-200 p-4 flex flex-col">
+       <img alt="Imagem de um manuscrito antigo da Edda nórdica com runas e ilustrações medievais" class="rounded mb-2 w-full h-36 object-cover" height="150" src="https://storage.googleapis.com/a1aa/image/193ac6b1-96fc-47f8-387c-395f9c1ab57a.jpg" width="300"/>
+       <h3 class="text-lg font-semibold text-blue-800 mb-1">
+        Edda
+       </h3>
+       <p class="text-gray-700 text-xs sm:text-sm flex-grow leading-relaxed">
+        Coleção de poemas e mitos da mitologia nórdica, fonte principal para estudos da tradição viking.
+       </p>
+       <a class="mt-2 text-blue-700 hover:underline font-semibold self-start text-sm" href="#">
+        Ler trecho
+       </a>
+      </article>
+      <article class="bg-white rounded-lg shadow-md border border-gray-200 p-4 flex flex-col">
+       <img alt="Imagem de um livro ilustrado com mitos gregos, mostrando deuses e heróis em pinturas clássicas" class="rounded mb-2 w-full h-36 object-cover" height="150" src="https://storage.googleapis.com/a1aa/image/2180a012-47ac-42f5-d038-ade623aebd6c.jpg" width="300"/>
+       <h3 class="text-lg font-semibold text-blue-800 mb-1">
+        Mitos Gregos
+       </h3>
+       <p class="text-gray-700 text-xs sm:text-sm flex-grow leading-relaxed">
+        Narrativas sobre deuses, heróis e monstros que influenciaram a cultura ocidental.
+       </p>
+       <a class="mt-2 text-blue-700 hover:underline font-semibold self-start text-sm" href="#">
+        Ler trecho
+       </a>
+      </article>
+      <article class="bg-white rounded-lg shadow-md border border-gray-200 p-4 flex flex-col">
+       <img alt="Imagem de um manuscrito antigo do Popol Vuh, texto sagrado maia, com desenhos coloridos" class="rounded mb-2 w-full h-36 object-cover" height="150" src="https://storage.googleapis.com/a1aa/image/563d3948-33f4-40c6-a120-e5330cd2973a.jpg" width="300"/>
+       <h3 class="text-lg font-semibold text-blue-800 mb-1">
+        Popol Vuh
+       </h3>
+       <p class="text-gray-700 text-xs sm:text-sm flex-grow leading-relaxed">
+        Texto sagrado dos maias, contendo mitos de criação e histórias dos povos indígenas da América Central.
+       </p>
+       <a class="mt-2 text-blue-700 hover:underline font-semibold self-start text-sm" href="#">
+        Ler trecho
+       </a>
+      </article>
+      <article class="bg-white rounded-lg shadow-md border border-gray-200 p-4 flex flex-col">
+       <img alt="Imagem de uma pilha de livros acadêmicos e artigos sobre filosofia da religião" class="rounded mb-2 w-full h-36 object-cover" height="150" src="https://storage.googleapis.com/a1aa/image/1ca1b381-5b44-4634-c3a9-b164c51aaf4b.jpg" width="300"/>
+       <h3 class="text-lg font-semibold text-blue-800 mb-1">
+        Ensaios e Artigos
+       </h3>
+       <p class="text-gray-700 text-xs sm:text-sm flex-grow leading-relaxed">
+        Textos acadêmicos e reflexões contemporâneas sobre temas da filosofia da religião.
+       </p>
+       <a class="mt-2 text-blue-700 hover:underline font-semibold self-start text-sm" href="#">
+        Ler artigos
+       </a>
+      </article>
+     </div>
+    </section>
+    <!-- Comunidade e Debate -->
+    <section class="space-y-8" id="comunidade">
+     <h2 class="text-2xl sm:text-3xl font-serif font-bold text-blue-900 border-b-4 border-gold-400 inline-block pb-1 mb-4">
+      Comunidade e Debate
+     </h2>
+     <div class="grid grid-cols-1 lg:grid-cols-2 gap-6">
+      <!-- Fórum -->
+      <div class="bg-white rounded-lg shadow-md border border-gray-200 p-4 flex flex-col">
+       <h3 class="text-xl font-semibold text-blue-800 mb-3 flex items-center gap-2">
+        <i class="fas fa-comments text-gold-400 text-lg"></i>
+        Fórum com Moderação Respeitosa
+       </h3>
+       <p class="text-gray-700 flex-grow mb-3 text-sm">
+        Espaço para discussões abertas, respeitando todas as crenças e opiniões.
+       </p>
+       <ul class="divide-y divide-gray-200 max-h-48 overflow-y-auto text-sm">
+        <li class="py-2">
+         <a class="text-blue-700 hover:underline font-semibold" href="#">
+          Quem foi Odin?
+          <span class="text-gray-500 text-xs">
+           – por usuário123
+          </span>
+         </a>
+        </li>
+        <li class="py-2">
+         <a class="text-blue-700 hover:underline font-semibold" href="#">
+          Como o Islã entende Deus?
+          <span class="text-gray-500 text-xs">
+           – por maria_s
+          </span>
+         </a>
+        </li>
+        <li class="py-2">
+         <a class="text-blue-700 hover:underline font-semibold" href="#">
+          Diferenças entre alma e espírito nas tradições
+          <span class="text-gray-500 text-xs">
+           – por filosofando
+          </span>
+         </a>
+        </li>
+        <li class="py-2">
+         <a class="text-blue-700 hover:underline font-semibold" href="#">
+          O papel da meditação no budismo
+          <span class="text-gray-500 text-xs">
+           – por zen_master
+          </span>
+         </a>
+        </li>
+        <li class="py-2">
+         <a class="text-blue-700 hover:underline font-semibold" href="#">
+          Relação entre ciência e espiritualidade
+          <span class="text-gray-500 text-xs">
+           – por cientista_esp
+          </span>
+         </a>
+        </li>
+        <li class="py-2">
+         <a class="text-blue-700 hover:underline font-semibold" href="#">
+          Arquétipos junguianos e mitologia
+          <span class="text-gray-500 text-xs">
+           – por psicologia_101
+          </span>
+         </a>
+        </li>
+        <li class="py-2">
+         <a class="text-blue-700 hover:underline font-semibold" href="#">
+          Textos sagrados comparados
+          <span class="text-gray-500 text-xs">
+           – por leitor_avido
+          </span>
+         </a>
+        </li>
+        <li class="py-2">
+         <a class="text-blue-700 hover:underline font-semibold" href="#">
+          Filosofia da religião contemporânea
+          <span class="text-gray-500 text-xs">
+           – por prof_academico
+          </span>
+         </a>
+        </li>
+       </ul>
+       <button class="mt-4 bg-blue-700 hover:bg-blue-600 text-white font-semibold py-1.5 px-3 rounded self-start transition-colors duration-300 text-sm">
+        Entrar no Fórum
+       </button>
+      </div>
+      <!-- Artigos de Colaboradores -->
+      <div class="bg-white rounded-lg shadow-md border border-gray-200 p-4 flex flex-col">
+       <h3 class="text-xl font-semibold text-blue-800 mb-3 flex items-center gap-2">
+        <i class="fas fa-file-alt text-gold-400 text-lg"></i>
+        Artigos de Colaboradores
+       </h3>
+       <article class="mb-4">
+        <h4 class="text-lg font-semibold text-blue-900 mb-1">
+         A Influência da Mitologia Grega na Psicologia Moderna
+        </h4>
+        <p class="text-gray-700 text-sm leading-relaxed">
+         Por Ana Silva – Explora como os arquétipos gregos influenciam teorias psicológicas contemporâneas.
+        </p>
+       </article>
+       <article class="mb-4">
+        <h4 class="text-lg font-semibold text-blue-900 mb-1">
+         Neurociência e Experiências Religiosas: Um Diálogo Possível?
+        </h4>
+        <p class="text-gray-700 text-sm leading-relaxed">
+         Por João Pereira – Análise das descobertas científicas sobre estados alterados de consciência.
+        </p>
+       </article>
+       <article class="mb-4">
+        <h4 class="text-lg font-semibold text-blue-900 mb-1">
+         Comparando Conceitos de Alma nas Tradições Asiáticas
+        </h4>
+        <p class="text-gray-700 text-sm leading-relaxed">
+         Por Mei Ling – Estudo comparativo entre budismo, hinduísmo e taoísmo.
+        </p>
+       </article>
+       <article>
+        <h4 class="text-lg font-semibold text-blue-900 mb-1">
+         Filosofia da Religião no Século XXI: Novos Desafios
+        </h4>
+        <p class="text-gray-700 text-sm leading-relaxed">
+         Por Carlos Mendes – Reflexões sobre o papel da religião na sociedade contemporânea.
+        </p>
+       </article>
+       <button class="mt-4 bg-blue-700 hover:bg-blue-600 text-white font-semibold py-1.5 px-3 rounded self-start transition-colors duration-300 text-sm">
+        Ver Todos os Artigos
+       </button>
+      </div>
+     </div>
+    </section>
+   </section>
+  </main>
+  <!-- Footer -->
+  <footer class="bg-blue-900 text-white py-6 px-4 sm:px-8 lg:px-16 mt-16">
+   <div class="max-w-7xl mx-auto flex flex-col sm:flex-row justify-between items-center gap-4 text-sm sm:text-base">
+    <p class="max-w-xl text-center sm:text-left">
+     © 2024 Teologia – O Estudo do Divino. Todos os direitos reservados.
+    </p>
+    <p class="max-w-xl italic text-center sm:text-right max-w-md">
+     “Este site não promove crenças específicas. É um espaço de estudo e diálogo.”
+    </p>
+   </div>
+   <div class="mt-4 flex justify-center gap-6 text-gold-400 text-xl sm:text-2xl">
+    <i class="fas fa-spa" title="Símbolo de Lótus representando espiritualidade"></i>
+    <i class="fas fa-cross" title="Cruz representando o Cristianismo"></i>
+    <i class="fas fa-star-of-david" title="Estrela de Davi representando o Judaísmo"></i>
+    <i class="fas fa-eye" title="Olho de Hórus representando a mitologia egípcia"></i>
+    <i class="fas fa-yin-yang" title="Símbolo Yin Yang representando o Taoísmo"></i>
+   </div>
+  </footer>
+  <script>
+   const sidebar = document.getElementById('sidebar');
+    const overlay = document.getElementById('overlay');
+    const openBtn = document.getElementById('openSidebarBtn');
+    const closeBtn = document.getElementById('closeSidebarBtn');
+
+    function openSidebar() {
+      sidebar.classList.remove('translate-x-full');
+      overlay.classList.remove('hidden');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeSidebar() {
+      sidebar.classList.add('translate-x-full');
+      overlay.classList.add('hidden');
+      document.body.style.overflow = '';
+    }
+
+    openBtn.addEventListener('click', openSidebar);
+    closeBtn.addEventListener('click', closeSidebar);
+    overlay.addEventListener('click', closeSidebar);
+
+    // Close sidebar on ESC key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && !sidebar.classList.contains('translate-x-full')) {
+        closeSidebar();
+      }
+    });
+  </script>
+ </body>
+         </html>
